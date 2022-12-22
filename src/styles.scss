@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+body{
+    background-color: rgb(238, 241, 234);
+    font-family: 'Times New Roman', Times, serif;
+    // background-image: url("https://s3.envato.com/files/230889973/Preview.jpg");
+    background-image: url("https://cdn.newswire.com/files/x/58/4c/8c8f6ab4197b8bc0c43b36698b93.jpg");
+    // background-image: ;
+    // background-image:png.pngtree.com/thumb_back/fh260/background/20210923/pngtree-news-red-and-blue-stripe-tv-background-image_902549.png;
+// width: 100px;
+// height: 100px;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-attachment: fixed;
+
+}
+.navbar-brand {
+    color:antiquewhite;
+
+
+}
+
+
+
+// .navbar-collapse {
+//     color:aliceblue;
+
+.nav-link{
+    color:aliceblue;
+    font-family:Cambria, Cochin, Georgia;
+}
+.navbar-nav {
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-color: var(--bs-navbar-color);
+    --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
+    --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    
+}
+
+.navbar {
+--bs-navbar-hover-color: #ffc107;
+}
