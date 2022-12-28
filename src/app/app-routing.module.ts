@@ -6,6 +6,7 @@ import { HealthComponent } from './health/health.component';
 import { SportsComponent } from './sports/sports.component';
 import { TechnewsComponent } from './technews/technews.component';
 import { TopheadingComponent } from './topheading/topheading.component';
+import { WeatherComponent } from './weather/weather.component';
 
 const routes: Routes = [
   {path:'',component:TopheadingComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'entertainment',component:EntertainmentComponent},
   {path:'health',component:HealthComponent},
   {path:'sports',component:SportsComponent},
+  {path:'weather',component:WeatherComponent}
 
 ];
 

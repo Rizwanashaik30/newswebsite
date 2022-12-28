@@ -11,6 +11,12 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { HealthComponent } from './health/health.component';
 import { SportsComponent } from './sports/sports.component';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+// import { WeatherComponent } from './weather/weather.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { WeatherComponent } from './weather/weather.component';
+import { ApixuService } from './apixu.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,19 +25,25 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
     BussinessnewsComponent,
     EntertainmentComponent,
     HealthComponent,
-    SportsComponent
+    SportsComponent,
+    WeatherComponent
+ 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LoadingBarHttpClientModule 
+    LoadingBarHttpClientModule ,
+    ReactiveFormsModule,
+    // RouterModule.forRoot(allAppRoutes)
+    // WeatherComponent
     
     
     
 
   ],
-  providers: [NewsapiservicesService],
+  providers: [NewsapiservicesService,ApixuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
