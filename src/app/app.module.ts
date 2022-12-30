@@ -17,6 +17,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { ApixuService } from './apixu.service';
 import { RizComponent } from './riz/riz.component';
 import { SoumyaComponent } from './soumya/soumya.component';
+import { TeamComponent } from './team/team.component';
+import { MounikaComponent } from './mounika/mounika.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { SoumyaComponent } from './soumya/soumya.component';
     SportsComponent,
     WeatherComponent,
     RizComponent,
-    SoumyaComponent
+    SoumyaComponent,
+    TeamComponent,
+    MounikaComponent
  
 
   ],
