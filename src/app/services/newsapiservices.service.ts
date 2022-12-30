@@ -24,7 +24,7 @@ export class NewsapiservicesService {
     sportsApiurl="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=8fbda421aec949199a6b17b84f1dc778";
 
 
-    weatherApiurl="https://api.apixu.com/v1/current.json?key=54c38753f238ae61e65f45a4f42ea53a&q=india";
+    // weatherApiurl="https://api.apixu.com/v1/current.json?key=54c38753f238ae61e65f45a4f42ea53a&q=india";
 
     topHeading():Observable<any>
     {

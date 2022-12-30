@@ -9,24 +9,55 @@ import { ApixuService } from '../apixu.service';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent  implements OnInit{
-  public weatherSearchForm!: FormGroup;
-  ApixuService: any;
+
+  //  weatherSearchForm:FormGroup;
+  //   weatherData: any;
+  // apixuService: any;
+  // weatherSearchForm: any;
+  constructor(private formBuilder: FormBuilder,
+    private service: ApixuService
+  
+    ){}
+    weatherData: any;
+    apixuService: any;
+    weatherSearchForm: any;  
+    
+  ngOnInit(): void {
+    this.weatherSearchForm = this.formBuilder.group({
+      location: [""]
+    });
+   
+
+  }
+    
+    sendToAPIXU(formValues: any){
+    
+      this.apixuService.getWeather(formValues.location).subscribe((data: any)=>{
+        this.weatherData=data;
+        console.log(this.weatherData);
+      })
+      // 
+      
+    }
+    }
+ 
+    
+     
+ 
+
+
   // formBuilder: any;
   // apixuService: any;
-  weatherData: any;
+  // weatherData: any;
   
   // NewsapiservicesService: any;
-  constructor(private sevice: ApixuService,
-    private formBuilder: FormBuilder
-    ){}
+  
 
   // formBuilder: any;
   // constructor(private formBuilder: FormBuilder){
-    ngOnInit() {
-      this.weatherSearchForm = this.formBuilder.group({
-        location: [""]
-      });
-    }
+   
+    
+    
 
  
     // ngOnInit() {
@@ -35,16 +66,16 @@ export class WeatherComponent  implements OnInit{
     //   });
   //   }
   
-  sendToAPIXU(formValues:any) {
+//   sendToAPIXU(formValues:any) {
     
-    this. ApixuService
-      .getWeather(formValues.location)
-      .subscribe((data: any) => this.weatherData = data);
-      console.log(formValues);
+//     this. ApixuService
+//       .getWeather(formValues.location)
+//       .subscribe((data: any) => this.weatherData = data);
+//       console.log(formValues);
   
-   }
+//    }
 
-};
+// };
 
     
   
