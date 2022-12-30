@@ -19,6 +19,7 @@ import { RizComponent } from './riz/riz.component';
 import { SoumyaComponent } from './soumya/soumya.component';
 import { TeamComponent } from './team/team.component';
 import { MounikaComponent } from './mounika/mounika.component';
+import { VijayComponent } from './vijay/vijay.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { MounikaComponent } from './mounika/mounika.component';
     RizComponent,
     SoumyaComponent,
     TeamComponent,
-    MounikaComponent
+    MounikaComponent,
+    VijayComponent
  
 
   ],
