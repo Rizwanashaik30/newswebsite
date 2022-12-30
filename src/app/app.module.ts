@@ -15,6 +15,8 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WeatherComponent } from './weather/weather.component';
 import { ApixuService } from './apixu.service';
+import { RizComponent } from './riz/riz.component';
+import { SoumyaComponent } from './soumya/soumya.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ApixuService } from './apixu.service';
     EntertainmentComponent,
     HealthComponent,
     SportsComponent,
-    WeatherComponent
+    WeatherComponent,
+    RizComponent,
+    SoumyaComponent
  
 
   ],
