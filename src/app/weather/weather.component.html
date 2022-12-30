@@ -1,38 +1,65 @@
 <div class="container">
     <div class="row">
       <div class="col-md-6"><h3 class="text-center">Search for Weather:</h3>
+        <!-- <button type="submit" class="btn btn-success btn-md">Search for the weather</button> -->
+        <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)" >
         
-        <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
-        
-        <!-- <form [formGroup]="weatherSearchForm" > -->
-        
-          
-
-          
-        
-            <div class="form-group">
-              <input
-                class="form-control"
-                type="text"
+     
+       <div class="form-group">
+              <input class="form-control"type="text"
                 id="weatherLocation"
                 aria-describedby="weatherLocation"
                 placeholder="Please input a Location"
               formControlName="location"/>
              
              </div>
+             <div class="text-center">
+              <button type="submit" class="btn btn-success btn-md">Search for the weather</button>
+             </div>
+
              
+        </form>
+      </div>
+      
+     
+      <div class="col-md-6"><h3 class="text-center my-4">Weather Details:</h3>
+        <h6 class="text-center">
+
+          Feels Like{{this.weatherData?.current.feelslike}}
+            <!-- Current weather conditions:
+             {{this.weatherData?.current.condition.text}} -->
+            </h6>
+        <h6 class="text-center">
+          Current weather conditions:
+          {{this.weatherData?.current.condition.text}}
+        </h6>
+        <h6 class="text-center">
+          Feels like in Degrees Farenheit:
+          {{this.weatherData?.current.feelslike_f}}
+        </h6>
+        <h6 class="text-center">
+          Temperature in Degrees Celsius: {{this.weatherData?.current.temp_c}};
+        </h6>
+        <h6 class="text-center">
+          Temperature in Degrees Farenheit: {{this.weatherData?.current.temp_f}};
+        </h6>
+        <h6 class="text-center">
+          Feels like in Degrees Celsius: {{this.weatherData?.current.feelslike_c}};
+        </h6>
+        <p class="text-center">LocationSearched{{this.weatherData?.current.feelslike}} </p>
         
-      <div class="col-md-6"><h3 class="text-center">Weather Details:</h3>
-        <p class="text-center">
-            Current weather conditions: {{this.weatherData?.current.condition.text}}
-        </p>
-        <p class="text-center">
-            Temperature in Degrees Celsius: {{ this.weatherData?.current.temp_c }}
-          </p>
+        
     </div>
-    <div class="text-center"> 
-      <button type="submit" class="btn btn-success btn-md">
-        Search for the weather</button>
-     </div>
-    </form>
-  
+    
+    </div>
+    </div>
+<!-- <div>
+  <h2>weather News</h2>
+  <div class="row">
+    <div *ngFor="let w of weatherData "class="col-lg-3">
+      <div class="box">
+        <p>{{w.current.temp_c}}</p>
+      </div>
+    </div>
+  </div>
+</div> -->
