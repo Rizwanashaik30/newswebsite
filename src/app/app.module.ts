@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { allAppRoutes } from './weather/routes';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopheadingComponent } from './topheading/topheading.component';
@@ -15,11 +16,13 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WeatherComponent } from './weather/weather.component';
 import { ApixuService } from './apixu.service';
-import { RizComponent } from './riz/riz.component';
+
 import { SoumyaComponent } from './soumya/soumya.component';
 import { TeamComponent } from './team/team.component';
-import { MounikaComponent } from './mounika/mounika.component';
-import { VijayComponent } from './vijay/vijay.component';
+import { FormsModule } from '@angular/forms';
+
+
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -32,11 +35,10 @@ import { VijayComponent } from './vijay/vijay.component';
     HealthComponent,
     SportsComponent,
     WeatherComponent,
-    RizComponent,
+
     SoumyaComponent,
     TeamComponent,
-    MounikaComponent,
-    VijayComponent
+
  
 
   ],
@@ -44,9 +46,12 @@ import { VijayComponent } from './vijay/vijay.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+
     LoadingBarHttpClientModule ,
     ReactiveFormsModule,
-    // RouterModule.forRoot(allAppRoutes)
+    FormsModule,
+
+    RouterModule.forRoot(allAppRoutes)
     // WeatherComponent
     
     

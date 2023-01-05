@@ -1,12 +1,13 @@
 <div class="container">
     <div class="row">
-      <div class="col-md-6"><h3 class="text-center">Search for Weather:</h3>
-        <!-- <button type="submit" class="btn btn-success btn-md">Search for the weather</button> -->
-        <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)" >
+      <div class="col-md-6">
+        <h3 class="text-center my-4">Search for Weather:</h3>
+         <!-- <button type="submit" class="btn btn-success btn-md">Search for the weather</button>  -->
+         <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)" >
         
      
        <div class="form-group">
-              <input class="form-control"type="text"
+              <input class="form-control" type="text"
                 id="weatherLocation"
                 aria-describedby="weatherLocation"
                 placeholder="Please input a Location"
@@ -14,7 +15,8 @@
              
              </div>
              <div class="text-center">
-              <button type="submit" class="btn btn-success btn-md">Search for the weather</button>
+              <button type="submit" class="btn btn-success btn-md">
+                Search for the weather</button>
              </div>
 
              
@@ -22,39 +24,37 @@
       </div>
       
      
-      <div class="col-md-6"><h3 class="text-center my-4">Weather Details:</h3>
+      <div class="col-md-6 card">
+        <h3 class="text-center my-4">Weather Details:</h3>
         <h6 class="text-center">
-
-          Feels Like{{this.weatherData?.current.feelslike}}
-            <!-- Current weather conditions:
-             {{this.weatherData?.current.condition.text}} -->
-            </h6>
-        <h6 class="text-center">
-          Current weather conditions:
-          {{this.weatherData?.current.condition.text}}
+        Feels Like:{{
+          this.weatherData?.current.feelslike }}
+          
         </h6>
-        <h6 class="text-center">
+      
+       
+        <!-- <h6 class="text-center">
           Feels like in Degrees Farenheit:
           {{this.weatherData?.current.feelslike_f}}
-        </h6>
+        </h6> -->
         <h6 class="text-center">
           Temperature in Degrees Celsius: {{this.weatherData?.current.temp_c}};
         </h6>
         <h6 class="text-center">
           Temperature in Degrees Farenheit: {{this.weatherData?.current.temp_f}};
         </h6>
-        <h6 class="text-center">
+        <!-- <h6 class="text-center">
           Feels like in Degrees Celsius: {{this.weatherData?.current.feelslike_c}};
-        </h6>
-        <p class="text-center">LocationSearched{{this.weatherData?.current.feelslike}} </p>
+        </h6> -->
+          <p class="text-center">locationSearched :{{this.weatherData?.location.name}} </p> 
         
-        
-    </div>
+         
+    <!-- </div>
     
     </div>
-    </div>
-<!-- <div>
-  <h2>weather News</h2>
+    </div>   -->
+<!-- <div> -->
+  <!-- <h2>weather News</h2>
   <div class="row">
     <div *ngFor="let w of weatherData "class="col-lg-3">
       <div class="box">
@@ -62,4 +62,5 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
+ <div id="weatherapi-weather-widget-2"></div><script type='text/javascript' src='https://www.weatherapi.com/weather/widget.ashx?loc=1131989&wid=2&tu=2&div=weatherapi-weather-widget-2' async></script><noscript><a href="https://www.weatherapi.com/weather/q/secunderabad-1131989" alt="Hour by hour Secunderabad weather">10 day hour by hour Secunderabad weather</a></noscript> --> 
